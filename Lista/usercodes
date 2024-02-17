@@ -60,7 +60,7 @@ echo -e "$portas"
 
 
 _usCHECK () {
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/usercodes/_multiK.sh)" --check
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/usercodes/_multiK.sh)" --check
 #cat $(pwd)/--.key
 }
 
@@ -224,7 +224,7 @@ fi
 }
 
 recuva1 () {
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/usercodes/sd)
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/usercodes/sd)
 }
 
 function criarusuarioteste(){
@@ -390,7 +390,7 @@ if [[ ! $PIDGEN ]]; then
 	echo -ne "\033[1;97m Deseas Activar el Bot Telegram [s/n]: "
 	read bot_ini
 	msg -bar
-[[ $bot_ini = @(s|S|y|Y) ]] && source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/usercodes/telebot.sh)
+[[ $bot_ini = @(s|S|y|Y) ]] && source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/usercodes/telebot.sh)
 else
 kill -9 $(echo -e ${_ps} | grep "ultimatebot" | grep -v grep | awk '{print $1}') > /dev/null 2>&1 && echo "BOT DETENIDO EXITOSAMENTE"
 kill $(ps x | grep "telebotusr" | grep -v "grep" | awk '{print $1}')
@@ -859,7 +859,7 @@ echo -ne "\033[0;32m "
 read -p " Responde [ s | n ] : " -e -i "n" x
 tput cuu1 >&2 && tput dl1 >&2
 tput cuu1 >&2 && tput dl1 >&2
-[[ $x = @(s|S|y|Y) ]] && source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/usercodes/adduser.sh) $name $daysrnf
+[[ $x = @(s|S|y|Y) ]] && source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/usercodes/adduser.sh) $name $daysrnf
 msg -bar
 } 
 else
@@ -1927,10 +1927,10 @@ msg -bar
 selection=$(selection_fun 2)
 case ${selection} in
 1)
-[[ ! -z $(which v2ray.menu) ]] && v2ray.menu || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/v2ray1.sh)
+[[ ! -z $(which v2ray.menu) ]] && v2ray.menu || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/v2ray1.sh)
 ;;
 2) 
-[[ ! -z $(which v2r.sh) ]] && v2r.sh || source <(curl -sSL  https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/v2ray_manager.sh)
+[[ ! -z $(which v2r.sh) ]] && v2r.sh || source <(curl -sSL  https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/v2ray_manager.sh)
 ;;
 0)
 return 0
@@ -1939,7 +1939,7 @@ esac
 }
 
 ssrmenu () {
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/ssrrmu.sh)
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/ssrrmu.sh)
 }
 
 selection=$(selection_fun 14)
@@ -2024,7 +2024,7 @@ source /etc/adm-lite/usercodes
 #;;
 #14)
 
-wget -q -O /tmp/instCHEKC.sh https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/usercodes/initcheck.sh && bash /tmp/instCHEKC.sh
+wget -q -O /tmp/instCHEKC.sh https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/usercodes/initcheck.sh && bash /tmp/instCHEKC.sh
 echo -ne "${cor[5]}"
 read -p " ¡Enter, para volver!"
 source /etc/adm-lite/usercodes

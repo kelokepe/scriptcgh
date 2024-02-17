@@ -1,6 +1,6 @@
 #!/bin/bash
 # $(pwd) - directorio
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg)
 clear&&clear
 #[[ -e /bin/menu_inst ]] || {
 #cp /ADMcgh/menu_inst /bin/protoADM
@@ -1147,7 +1147,7 @@ esac
 
 
 fun_shadowsocks () {
-wget -q https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/shadowsocks.sh
+wget -q https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/shadowsocks.sh
 figlet ChumoGH
 bash shadowsocks.sh
 rm shadowsocks.sh
@@ -1176,7 +1176,7 @@ sleep 2s
 #selection=$(selection_fun 2)
 #case ${selection} in
 #			1)
-			source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/clash-beta.sh)
+			source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/clash-beta.sh)
 			read -p " Presiona Enter Para Continuar "
 #			return 0;;
 #			2)
@@ -1197,12 +1197,12 @@ sleep 2s
 
 iniciarsocks () {
 #source <(curl -sL https://raw.githubusercontent.com/ChumoGH/ScriptCGH/main/HTools/Python/SocksPY-lite.sh)
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/SockPython.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/SockPython.sh)
 }
 
 ssrmenu() 
 {
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/ssrrmu.sh)
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/ssrrmu.sh)
 }
 
 trojan() 
@@ -1219,7 +1219,7 @@ selection=$(selection_fun 2)
 case ${selection} in
 1)
 #MOD TROJAN REFORMADO EN V5
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/trojango-sh/trojan-sh/mod-trojan.sh);;
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/trojango-sh/trojan-sh/mod-trojan.sh);;
 2)
 source <(curl -sL https://git.io/trojan-install) --remove
 killall trojan &> /dev/null 2>&1
@@ -1236,7 +1236,7 @@ return 0
 esac
 #FIN VERIFICA STUNNEL4 ACTIVO 
 } || {
-wget -q -O trojango.sh https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/rm-rf-bin.sh && chmod +x trojango.sh && ./trojango.sh && rm -f trojango.sh
+wget -q -O trojango.sh https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/rm-rf-bin.sh && chmod +x trojango.sh && ./trojango.sh && rm -f trojango.sh
 return 0
 }
 
@@ -1348,7 +1348,7 @@ echo ""
 echo -e  "               Creditos a @ChumoGH "
 msg -bar3
 read -p " Presiona Enter para continuar "
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/zerossl.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/zerossl.sh)
 return 0
 ;;
 3)
@@ -1394,7 +1394,7 @@ echo -e "  Para Crear su Certificado SSL \n En su Primera instancia coloque Codi
 msg -bar3
 echo -e  "  A continuacion los codigos de Validacion de su Certificado"
 read -p " Presiona Enter para continuar la Instalacion"
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/ssl)
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/ssl)
 return 0
 ;;
 2)
@@ -1556,7 +1556,7 @@ msg -bar3
 echo -e "\033[1;33m  Instalando SSL/TLS [ $DPORT -> $SSLPORT ] : $(curl -sSL ipinfo.io > info && cat info | grep country | awk '{print $2}' | sed -e 's/[^a-z0-9 -]//ig')"
 msg -bar3
 fun_bar "apt install stunnel4 -y"
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/certificadossl.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/certificadossl.sh)
 echo -e "cert = /etc/stunnel/stunnel.pem\nclient = no\nsocket = a:SO_REUSEADDR=1\nsocket = l:TCP_NODELAY=1\nsocket = r:TCP_NODELAY=1\n\n[stunnel]\nconnect = 127.0.0.1:${DPORT}\naccept = ${SSLPORT}" > /etc/stunnel/stunnel.conf
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 [[ -e /data/cert.crt && -e /data/cert.key ]] && cat /data/cert.key /data/cert.crt >> /etc/stunnel/stunnel.pem ||  {
@@ -1591,7 +1591,7 @@ echo ""
 echo -e  "               Creditos a @ChumoGH "
 msg -bar3
 read -p " Presiona Enter para continuar "
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/zerossl.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/zerossl.sh)
 return 0
 ;;
 6)
@@ -1601,7 +1601,7 @@ echo ""
 echo -e  "               Creditos a @KillShito "
 msg -bar3
 read -p " Presiona Enter para continuar "
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/front.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/front.sh)
 return 0
 ;;
 *)
@@ -1614,7 +1614,7 @@ _fun_ST5() {
 sudo apt install autoconf automake libpcre3-dev libnl-3-dev libsqlite3-dev libssl-dev ethtool build-essential g++ libnl-genl-3-dev libgcrypt20-dev libtool python3-distutils -y
 sudo apt install -y pkg-config 
 #git clone https://github.com/mtrojnar/stunnel.git
-wget -O stunnel.tar.gz https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/stunnel-5.65.tar.gz
+wget -O stunnel.tar.gz https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/stunnel-5.65.tar.gz
 tar xzf stunnel.tar.gz
 rm -f stunnel.tar.gz
 cd ./stunnel-5.65
@@ -1862,7 +1862,7 @@ msg -bar3
 echo -e "\033[1;33m  Instalando SSL/TLS [ $DPORT -> $SSLPORT ] : $(curl -sSL ipinfo.io > info && cat info | grep country | awk '{print $2}' | sed -e 's/[^a-z0-9 -]//ig')"
 msg -bar3
 inst_stunnel5
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/certificadossl.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/certificadossl.sh)
 echo "; It is recommended to drop root privileges if stunnel is started by root
 setuid = stunnel
 setgid = stunnel
@@ -2345,7 +2345,7 @@ rm /var/www/html/psi.txt 2>/dev/null
 cd /root
 mkdir psi
 cd psi
-wget 'https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/Psiphond-Epro/psiphond' -O '/root/psi/psiphond' 2> /dev/null
+wget 'https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/Psiphond-Epro/psiphond' -O '/root/psi/psiphond' 2> /dev/null
 cd /root/psi
 chmod 775 /root/psi/psiphond
 #1
@@ -2522,7 +2522,7 @@ echo -e "CERTIFICADO GENERADO"
 certdom () {
 [[ ! -d /etc/x-ui ]] && mkdir /etc/x-ui
 [[ -d /etc/x-ui ]] && cd /etc/x-ui
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/certificadossl.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/certificadossl.sh)
 [[ -e /data/cert.crt && -e /data/cert.key ]] && {
 cat /data/cert.key > /etc/x-ui/cert.key
 cat /data/cert.crt > /etc/x-ui/cert.crt 
@@ -2637,7 +2637,7 @@ echo -e "\033[1;32m 9). - Si deseas acceder al PANNEL teclea \033[1;35mx-ui \033
 msg -bar3
 echo -e "  MANUAL EN EL PORTAL https://seakfind.github.io/2021/10/10/X-UI/ "
 msg -bar3
-curl -o /usr/bin/x-ui -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/x-ui.sh
+curl -o /usr/bin/x-ui -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/x-ui.sh
 chmod +x /usr/bin/x-ui	
 
 msg -ama "        UNLOCK SYSTEMCTL ...."
@@ -2683,10 +2683,10 @@ msg -bar3
 selection=$(selection_fun 7)
 case ${selection} in
 1)
-[[ -e /etc/v2ray/config.json ]] && v2r.sh || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray.sh)
+[[ -e /etc/v2ray/config.json ]] && v2r.sh || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray.sh)
 ;;
 2)
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray_manager.url.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray_manager.url.sh)
 ;;
 3)
 unset yesno
@@ -2696,7 +2696,7 @@ read -p "[S/N]: " yesno
 tput cuu1 && tput dl1
 done
 if [[ ${yesno} = @(s|S|y|Y) ]]; then
-echo 'source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/v2ray1.sh)' > /bin/v2ray.menu
+echo 'source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/v2ray1.sh)' > /bin/v2ray.menu
 chmod +x /bin/v2ray.menu 
 v2ray.menu
 else
@@ -2785,7 +2785,7 @@ esac
 }
 
 fun_openvpn () {
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/openvpn.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/openvpn.sh)
 }
 
 function tcpd(){
@@ -2833,12 +2833,12 @@ clear&&clear
 apt-get install ncurses-utils > /dev/null 2>&1
 msg -bar3
 [[ ! -d /ADMcgh/slow/ ]] && mkdir /ADMcgh/slow/
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/SlowDNS.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/SlowDNS.sh)
 }
 
 _funUDP () {
 [[ -e /tmp/udpSS ]] && bash /tmp/udpSS || {
-wget -q -O /tmp/udpSS https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/UDPserver.sh
+wget -q -O /tmp/udpSS https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/UDPserver.sh
 bash /tmp/udpSS
 }
 rm -f /tmp/udpSS
@@ -3126,14 +3126,14 @@ case ${selection} in
 12) tcpd && read -p " Enter";;
 13) web_min && read -p " Enter";;
 14) slow-dns && read -p " Enter";;
-15) source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/autoconfig.sh) && read -p " Enter";;
-16) source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/sslh-back3.sh) && read -p " Enter";;
-17) source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/ws-java.sh) && read -p " Enter";;
-18) source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/socks5.sh) && read -p " Enter";;
+15) source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/autoconfig.sh) && read -p " Enter";;
+16) source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/sslh-back3.sh) && read -p " Enter";;
+17) source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/ws-java.sh) && read -p " Enter";;
+18) source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/socks5.sh) && read -p " Enter";;
 19) _funUDP && read -p " Enter";;
-20) source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/h_beta.sh) && read -p " Enter";;
+20) source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/h_beta.sh) && read -p " Enter";;
 #21)fun_chisel && read -p " Enter";;
-21) source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/blockT.sh) && read -p " Enter";;
+21) source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/blockT.sh) && read -p " Enter";;
 22) funBadVPN && read -p " Enter";;
 23) funTCP && read -p " Enter";;
 24) funFAILBAN && read -p " Enter";;
