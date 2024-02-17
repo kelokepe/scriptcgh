@@ -38,7 +38,7 @@ echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 [[ -z $(locale | grep "LANG=" | cut -d "=" -f2) ]] && export LANG=en_US.UTF-8 
 DATE=$(date +"%d-%m-%y")
 TIME=$(date +"%T") 
-figlet -f slant "ChumoGH" | lolcat 
+figlet -f slant "ChuKK-MOD" | lolcat 
 echo -e "" 
 killall menu &> /dev/null
 /bin/autoboot &> /dev/null
@@ -68,7 +68,7 @@ echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
 [[ -z $(locale | grep "LANG=" | cut -d "=" -f2) ]] && export LANG=en_US.UTF-8 
 DATE=$(date +"%d-%m-%y")
 TIME=$(date +"%T") 
-figlet -f slant "ChumoGH" | lolcat 
+figlet -f slant "ChuKK-MOD" | lolcat 
 echo -e "" 
 killall menu &> /dev/null
 /bin/autoboot &> /dev/null
@@ -334,7 +334,7 @@ _check2BOT="$(echo -e "$_double" | grep ${IiP} | awk '{print $5}')"
 _check2RES="$(echo -e "$_double" | grep ${IiP} | awk '{print $7}')"
 msg -bar3
 echo -e ""
-echo -e "${cor[2]}\n\033[1;37m  SCRIPT DESARROLLADO por: @ChumoGH - Henry Chumo" | pv -qL 12
+echo -e "${cor[2]}\n\033[1;37m  SCRIPT DESARROLLADO por: @drowkid01 - ✧ | ᴅʀᴏᴡᴋɪᴅ | ✧" | pv -qL 12
 echo -e ""
 msg -bar3
 echo -e "  ${cor[5]} ADM-LITE Mod ChumoGH-ADM REFACTORIZADO 2023" 
@@ -386,7 +386,7 @@ rm -f /var/log/auth.log*
 echo '' > /var/log/auth.log
 cp /bin/adm /bin/menu
 }
-cd ${SCPdir} && ./menu' > /bin/cgh && chmod +x /bin/cgh
+cd ${SCPdir} && ./menu' > /bin/chukk && chmod +x /bin/chukk
 #
 echo '#!/bin/bash
 # Creado por @ChumoGH
