@@ -36,10 +36,10 @@ function chekKEY {
 [[ -z ${IP} ]] && IP=$(cat < /bin/ejecutar/IPcgh)
 [[ -z ${IP} ]] && IP=$(wget -qO- ifconfig.me)
 Key="$(cat /etc/cghkey)"
-_double=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt")
+_double=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt")
 IiP="$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
 [[ -e /file ]] && _double=$(cat < /file) ||  {
-wget -q -O /file https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt
+wget -q -O /file https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt
 _double=$(cat < /file)
 }
 _check2="$(echo -e "$_double" | grep ${IiP})"
@@ -101,7 +101,7 @@ if [[ $(cat $v2rdir/conf | grep "autBackup") = "" ]]; then
 	echo "autBackup 0" >> $v2rdir/conf
 fi
 barra="\033[0;31m=====================================================\033[0m"
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg) > /dev/null
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg) > /dev/null
 numero='^[0-9]+$'
 hora=$(printf '%(%H:%M:%S)T') 
 fecha=$(printf '%(%D)T')
@@ -1553,7 +1553,7 @@ install(){
 	install_ini
 	msg -bar3
 	blanco "	Esta por intalar v2ray!"
-	echo "source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray_manager.url.sh)" > /bin/v2r.sh
+	echo "source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray_manager.url.sh)" > /bin/v2r.sh
 	chmod +x /bin/v2r.sh
 	msg -bar3
 	blanco " La instalacion puede tener\n alguna fallas!\n por favor observe atentamente\n el log de intalacion,\n este podria contener informacion\n sobre algunos errores!\n estos deveras ser corregidos de\n forma manual antes de continual\n usando el script"
@@ -1563,7 +1563,7 @@ install(){
 	read foo
 	config='/etc/v2ray/config.json'
     tmp='/etc/v2ray/temp.json'
-	source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray.sh)
+	source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray.sh)
 echo '[Unit]
 Description=V2Ray Service
 After=network.target nss-lookup.target
@@ -1600,7 +1600,7 @@ clear&&clear
 					msg -bar3
 					[[ -e /bin/xr.sh ]] && xr.sh || {
 					xray
-					echo "source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/xray_manager.sh)" > /bin/xr.sh
+					echo "source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/xray_manager.sh)" > /bin/xr.sh
 					chmod +x /bin/xr.sh
 							clear
 							msg -bar3
@@ -1872,7 +1872,7 @@ settings(){
 _xray() {
 [[ -e /bin/xr.sh ]] && xr.sh || {
 xray
-echo "source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/xray_manager.sh)" > /bin/xr.sh
+echo "source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/xray_manager.sh)" > /bin/xr.sh
 chmod +x /bin/xr.sh
 		clear
 		msg -bar3
@@ -1893,7 +1893,7 @@ chmod +x /bin/xr.sh
 }
 
 enon(){
-echo "source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray_manager.url.sh)" > /bin/v2r.sh
+echo "source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray_manager.url.sh)" > /bin/v2r.sh
 chmod +x /bin/v2r.sh
 		clear
 		msg -bar3

@@ -5,8 +5,8 @@
 #  INCLUIDO CON EL TOKEN DE TU ZONA DIRIGIDO A TU DOMINIO #
 #  NO SEAS RATA Y CONFIERE SOLICITUD DIRECTO CON EL DESARROLLADOR !! #
 
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/module)
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/module)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg)
 ADM_crt=''
 Key="$(cat /etc/cghkey)"
 #jq
@@ -257,7 +257,7 @@ ger_cert(){
 }
 
 _mssBOT () {
-xyz=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/token.sh")
+xyz=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/token.sh")
 [[ "$(cat -n /etc/adm-lite/menu_credito | wc -l)" -ge "2" ]] && ID="$(cat /etc/adm-lite/menu_credito |tail -1)" || ID="$(echo $xyz| awk '{print $2}')"
 TOKEN="$(echo $xyz| awk '{print $1}')"
 urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"

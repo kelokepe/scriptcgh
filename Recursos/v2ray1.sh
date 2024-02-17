@@ -1,10 +1,10 @@
 #!/bin/bash
 #24/10/2022
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg) > /dev/null
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg) > /dev/null
 clear&&clear
 funINIT() {
 [[ $1 == 1 ]] && {
-echo 'source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/v2ray1.sh)' > /bin/v2ray.menu
+echo 'source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/v2ray1.sh)' > /bin/v2ray.menu
 chmod +x /bin/v2ray.menu 
 echo -e " RECUERDA QUE PARA UN INICIO RAPIDO SOLO DIGITA"
 msg -bar
@@ -229,7 +229,7 @@ err_fun () {
 }
 intallv2ray () {
 install_ini
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray.sh)
 #source <(curl -sL https://raw.githubusercontent.com/ChumoGH/ADMRufu/main/Utils/v2ray/v2ray.sh)
 [[ -e "$config" ]] && jq 'del(.inbounds[].streamSettings.kcpSettings[])' < /etc/v2ray/config.json >> /etc/v2ray/tmp.json
 #rm -rf /etc/v2ray/config.json
@@ -267,7 +267,7 @@ msg -bar
 msg -ne "Enter Para Continuar" && read enter
 [[ ! -d ${SCPinst} ]] && mkdir ${SCPinst}
 [[ ! -d /etc/adm-lite/v2ray ]] && mkdir /etc/adm-lite/v2ray
-echo 'source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/v2ray1.sh)' > /bin/v2ray.menu
+echo 'source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/v2ray1.sh)' > /bin/v2ray.menu
 chmod +x /bin/v2ray.menu
 }
 protocolv2ray () {
@@ -309,7 +309,7 @@ usrCONEC
 v2ray.menu
 }
 unistallv2 () {
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/v2ray.sh) --remove > /dev/null 2>&1
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/v2ray.sh) --remove > /dev/null 2>&1
 #source <(curl -sSL https://www.dropbox.com/s/cx8xhq3s53x3a75/insta-gen.sh)
 rm -rf /etc/adm-lite/RegV2ray > /dev/null 2>&1
 echo -e "\033[1;92m                  V2RAY REMOVIDO OK "
@@ -1022,7 +1022,7 @@ case ${selection} in
 2)resdata;;
 3)estarts;;
 0)
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/v2ray1.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/v2ray1.sh)
 ;;
 esac
 }
