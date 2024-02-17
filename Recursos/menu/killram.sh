@@ -50,11 +50,11 @@ echo -e >> $HOME/lm.log
 echo "Limpio >" $tiempo >> /root/lm.log
 echo ${unLimit} "MB - Esta bajo el limite 100MB en " $tiempo >> /root/lm.log
 fi
-wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg
+wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg
 [[ -e /bin/ejecutar/autt ]] && { 
 name=$(cat < /bin/ejecutar/autt)
 echo "Haciendo COPIA DE USUARIOS EN $name " $tiempo >> /root/lm.log
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/autobackup.sh) 
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/autobackup.sh) 
 } || {
 [[ -e /var/www/html/backup ]] && rm /var/www/html/backup
 echo "NO FileSystem " $tiempo >> /root/lm.log

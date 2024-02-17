@@ -73,7 +73,7 @@ EOF
 	#设置伪装站
 	rm -rf /usr/share/nginx/html/*
 	cd /usr/share/nginx/html/
-	wget https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/trojan-nao-sh/web.zip >/dev/null 2>&1
+	wget https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/trojan-nao-sh/web.zip >/dev/null 2>&1
     	unzip web.zip >/dev/null 2>&1
 	sleep 5
 	#申请https证书
@@ -90,7 +90,7 @@ EOF
 	wget https://api.github.com/repos/trojan-gfw/trojan/releases/latest >/dev/null 2>&1
 	latest_version=`grep tag_name latest| awk -F '[:,"v]' '{print $6}'`
 	rm -f latest
-	wget https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/trojan-nao-sh/trojan-1.16.0-linux-amd64.tar.xz >/dev/null 2>&1
+	wget https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/trojan-nao-sh/trojan-1.16.0-linux-amd64.tar.xz >/dev/null 2>&1
 	tar xf trojan-1.16.0-linux-amd64.tar.xz >/dev/null 2>&1
 	#下载trojan客户端
 	wget https://www.dropbox.com/s/yegoxa4hfo5sf2z/trojan-cli.zip >/dev/null 2>&1

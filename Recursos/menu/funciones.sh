@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg)
 
 cd $HOME
 selection_fun () {
@@ -215,7 +215,7 @@ unset x
 [[ -d /data ]] && rm -rf /data
 echo -e " CREAREMOS EL CERTIFICADO BETA EN /data" 
 read -p " PRESIONA ENTER PARA CONTINUAR O Cntrol + X para salir" 
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/certificadossl.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/certificadossl.sh)
 }
 msg -bar
 ip4=`curl -s -4 ipip.ooo`

@@ -14,7 +14,7 @@ if [[ $(cat $trojdir/conf | grep "autBackup") = "" ]]; then
 fi
 unset barra
 barra="\033[0;34m•••••••••••••••••••••••••••••••••••••••••••••••••\033[0m"
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg)
 numero='^[0-9]+$'
 hora=$(printf '%(%H:%M:%S)T') 
 fecha=$(printf '%(%D)T')
@@ -22,7 +22,7 @@ fecha=$(printf '%(%D)T')
 
 trojan() 
 {
-wget -q https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/trojango.sh; chmod +x trojango.sh; ./trojango.sh
+wget -q https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/trojango.sh; chmod +x trojango.sh; ./trojango.sh
 rm -f trojango.sh
 }
 
@@ -107,7 +107,7 @@ read inst
 
  
 enon(){
-echo "source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/mod-v2ray.sh)" > /bin/troj.sh
+echo "source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/mod-v2ray.sh)" > /bin/troj.sh
 chmod +x /bin/troj.sh
 		clear
 		echo -e $barra
@@ -377,7 +377,7 @@ read foo
 }
 
 autoDel(){
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/trojango-sh/trojan-sh/autodel-trojan.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/trojango-sh/trojan-sh/autodel-trojan.sh)
 	}
 
 dell_user(){

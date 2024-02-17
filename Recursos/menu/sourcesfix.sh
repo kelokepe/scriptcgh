@@ -1,6 +1,6 @@
 function fixsources19(){
 echo -e "Reinstalando fuentes (sources)"
-curl -o /etc/apt/sources.list https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/Ubuntu19.10.list && apt-get update && apt-get upgrade -y
+curl -o /etc/apt/sources.list https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/Ubuntu19.10.list && apt-get update && apt-get upgrade -y
 echo -e "Reinstalacion completada"
 echo -e "\033[1;31mPRESIONE ENTER PARA CONTINUAR\033[0m"
 read -p " "
@@ -8,7 +8,7 @@ menu
 }
 function fixsources18(){
 echo -e "Reinstalando fuentes (sources)"
-curl -o /etc/apt/sources.list https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/Ubuntu18.04.list && apt-get update && apt-get upgrade -y
+curl -o /etc/apt/sources.list https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/Ubuntu18.04.list && apt-get update && apt-get upgrade -y
 echo -e "Reinstalacion completada"
 echo -e "\033[1;31mPRESIONE ENTER PARA CONTINUAR\033[0m"
 read -p " "
@@ -16,7 +16,7 @@ menu
 }
 function fixsources16(){
 echo -e "Reinstalando fuentes (sources)"
-curl -o /etc/apt/sources.list https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu/Ubuntu16.04.list && apt-get update && apt-get upgrade -y
+curl -o /etc/apt/sources.list https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu/Ubuntu16.04.list && apt-get update && apt-get upgrade -y
 echo -e "Reinstalacion completada"
 echo -e "\033[1;31mPRESIONE ENTER PARA CONTINUAR\033[0m"
 read -p " "
