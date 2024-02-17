@@ -37,7 +37,7 @@ sleep 0.5
 done 
 echo -ne "\033[1;33m]" 
 sleep 1s 
-echo tput cuu1 tput dl1 
+echo ;tput cuu1 && tput dl1 
 done 
 echo -e " \033[1;33m[\033[1;31m########################################\033[1;33m] - \033[1;32m100%\033[0m" 
 sleep 1s 
@@ -199,11 +199,11 @@ Banner /etc/bannerssh" > /etc/ssh/sshd_config
 
 
 ban_inex () {
-ban=$(cat < /ADMcgh/menu_credito | head -1)
+ban=$(cat < /etc/adm-lite/menu_credito | head -1)
 echo -e " "
 echo -e "BANNER INEXISTENTE - RECOMENDADO MODIFICAR TU BANNER"
 fun_bar 
-credit=$(cat </ADMcgh/menu_credito | head -1)
+credit=$(cat </etc/adm-lite/menu_credito | head -1)
 [[ -e /root/name ]] && credi="$(cat < /root/name)" || credi="${credit}"
 echo -e '<p style="text-align: center;"> <big><big><big><big><big><big>🐉</big></big></big></big></big></big></p>' > /etc/bannerssh
 echo -e '<p style="text-align: center;"><strong><span style="color: #FF00FF;">'" $credit "'&reg;</span> |&nbsp;</strong><span style="color: #483D8B;"><strong>'"$credi"'</strong></span></p>' >> /etc/bannerssh
@@ -1065,7 +1065,7 @@ fun_openssh() {
 
 
 fun_dropbear () {
-dropbearports=`netstat -tunlp | grep dropbear | grep 0.0.0.0: | awk '{print substr($4,9); }' > /tmp/dropbear.txt && echo | cat /tmp/dropbear.txt | tr '\n' ' ' > /ADMcgh/dropbearports.txt && cat /ADMcgh/dropbearports.txt`;
+dropbearports=`netstat -tunlp | grep dropbear | grep 0.0.0.0: | awk '{print substr($4,9); }' > /tmp/dropbear.txt && echo | cat /tmp/dropbear.txt | tr '\n' ' ' > /etc/adm-lite/dropbearports.txt && cat /etc/adm-lite/dropbearports.txt`;
 # INICIO STUNNEL ACTIVO
 figlet " DROPBEAR " | boxes -d stone -p a2v1
 msg -bar3
@@ -1161,7 +1161,7 @@ instala_clash () {
 #		clear
 #[[ -e /root/name ]] && figlet -p -f smslant < /root/name | lolcat || echo -e "\033[7;49;35m    ${TTini} New ChumoGH${TTcent}VPS  ${TTfin}      "
 tittle
-echo -e "\033[1;37m  ??   ?? Reseller :$(cat < /ADMcgh/menu_credito | head -1) - ADM 2023 ??      】\033[0m"
+echo -e "\033[1;37m  ??   ?? Reseller :$(cat < /etc/adm-lite/menu_credito | head -1) - ADM 2023 ??      】\033[0m"
 echo -e "[\033[1;31m-\033[1;33m]\033[1;31m #######################################\033[1;33m"
 echo -e "\033[1;37mSeleccione una opcion :    Para Salir Ctrl + C\033[1;33m"
 #echo -e "${cor[3]} Esta herramienta Permite escojer el menu Clash Nuevo y Antiguo"
@@ -1275,7 +1275,8 @@ echo -e " TE REDIRECCIONAREMOS HACIA STUNNEL 5" && sleep 2s
 ssl_stunel5 && return
 }
 # INICIO STUNNEL ACTIVO
-/ADMcgh/header "ports_"
+#/ADMcgh/header "ports_"
+sslkk
 msg -bar3 
 echo -e "${cor[2]} SSL / TLS -> STUNNEL4 ACTIVOS : $sslports "
 msg -bar3
@@ -1292,7 +1293,7 @@ return 0
 #clear
 ###
 #head -n -2 /ADMcgh/header > headuser.sh && chmod 777 headuser.sh && source headuser.sh && rm headuser.sh
-source header "ports_"
+#source header "ports_"
 #echo -e "Escriba un nombre para el Redireccionador SSL"
 #read -p ": " nombressl
 echo -e "\033[1;33m  Selecione un Puerto De Redirecionamento Interna (Default 22) "
@@ -1658,7 +1659,7 @@ echo -e " TE REDIRECCIONAREMOS HACIA STUNNEL 4" && sleep 2s
 ssl_stunel4 && return
 }
 # INICIO STUNNEL ACTIVO
-/ADMcgh/header "ports_"
+#/ADMcgh/header "ports_"
 msg -bar3
 echo -e "${cor[2]} SSL / TLS -> STUNNEL5 ACTIVOS : $sslports "
 msg -bar3
@@ -2832,7 +2833,7 @@ slow-dns () {
 clear&&clear
 apt-get install ncurses-utils > /dev/null 2>&1
 msg -bar3
-[[ ! -d /ADMcgh/slow/ ]] && mkdir /ADMcgh/slow/
+[[ ! -d /ADMcgh/slow/ ]] && mkdir -p /ADMcgh/slow/
 source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/SlowDNS.sh)
 }
 
