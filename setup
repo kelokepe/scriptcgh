@@ -1,7 +1,4 @@
-#CREADOR Henry Chumo | 25/08/2022
-# UPDATE  | 20/08/2023
-#Alias : @ChumoGH
-# -*- ENCODING: UTF-8 -*-
+#!/bin/bash
 
 apt --fix-broken install
 dpkg --configure -a
@@ -158,7 +155,7 @@ echo "  KEY NO PERMITIDA, ADQUIERE UN RESELLER OFICIAL" >> error.log
 echo "  ----------------------------------------------" >> error.log
 echo "  KEY NO PERMITIDA, ADQUIERE UN RESELLER OFICIAL" >> error.log
 echo "  ----------------------------------------------" >> error.log
-echo -e ' https://t.me/ChumoGH  - @ChumoGH' >> error.log
+echo -e ' https://t.me/drowkid01 @drowkid01' >> error.log
 msg -bar3 >> error.log
 cat error.log | lolcat
 exit&&exit&&exit&&exit
@@ -246,7 +243,7 @@ _sys="$(lsb_release -si)-$(lsb_release -sr)"
 msg -bar3 
 echo -e "   \033[41m- CPU: \033[100m${cpu_model}\033[41m SISTEMA : \033[100m${_sys}\033[41m -\033[0m"
 msg -bar3 
-echo -e "  ${FlT}${rUlq} ADMcgh Plus $(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/version/v-new.log) | @ChumoGH OFICIAL 2023 ${rUlq}${FlT}  -" | lolcat
+echo -e "  ${FlT}${rUlq} ADMcgh Plus $(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/version/v-new.log) | @drowkid01 OFICIAL 2023 ${rUlq}${FlT}  -" | lolcat
 msg -bar3
 figlet ' . ADMcgh . ' | boxes -d stone -p a0v0 | lolcat
 echo "           PEGA TU KEY DE INSTALACION " | lolcat
