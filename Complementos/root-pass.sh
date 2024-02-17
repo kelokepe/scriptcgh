@@ -1,10 +1,10 @@
 #!/bin/sh
 #Autor: Henry Chumo 
 #Alias : ChumoGH
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg)
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg)
 
 _mssBOT () {
-xyz=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/token.sh")
+xyz=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/token.sh")
 [[ "$(cat -n /etc/adm-lite/menu_credito | wc -l)" -ge "2" ]] && ID="$(cat /etc/adm-lite/menu_credito |tail -1)" || ID="$(echo $xyz| awk '{print $2}')"
 TOKEN="$(echo $xyz| awk '{print $1}')"
 urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"

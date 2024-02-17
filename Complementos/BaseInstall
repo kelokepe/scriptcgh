@@ -3,7 +3,7 @@
 
 
 [[ -e /file ]] && _double=$(cat < /file) ||  {
-_double=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt")
+_double=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt")
 echo -e "$(echo -e "$_double" | grep ${IiP})" > /file
 }
 [[ -z ${_check2} ]] && {
@@ -19,10 +19,10 @@ unset name
 [[ -e /etc/adm-lite/gerar.sh ]] && rm -f /etc/adm-lite/gerar.sh
 mkdir /bin/ejecutar
 [[ -e /bin/ejecutar/menu_credito ]] && echo "" || echo "$(cat /etc/adm-lite/menu_credito|head -1)" > /bin/ejecutar/menu_credito && chmod +x /bin/ejecutar/menu_credito
-wget -q -O /bin/toolmaster https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Complementos/toolmaster 
+wget -q -O /bin/toolmaster https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Complementos/toolmaster 
 chmod +x /bin/toolmaster
-echo 'source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Complementos/free-men.sh)' > /bin/ejecutar/echo-ram.sh
-echo 'wget -q -O /bin/ejecutar/v-new.log https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/version/v-new.log' >> /bin/ejecutar/echo-ram.sh && bash /bin/ejecutar/echo-ram.sh
+echo 'source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Complementos/free-men.sh)' > /bin/ejecutar/echo-ram.sh
+echo 'wget -q -O /bin/ejecutar/v-new.log https://raw.githubusercontent.com/kelokepe/scriptcgh/main/version/v-new.log' >> /bin/ejecutar/echo-ram.sh && bash /bin/ejecutar/echo-ram.sh
 echo '#!/bin/bash
 ' > /bin/autoboot
 chmod +x /bin/autoboot
@@ -150,7 +150,7 @@ echo -e "\033[1;42m APLICAR FIX de PASSWD para LIBERAR ACCESO "
 echo -e "SI YA ERES ROOT, SE CAMBIARA TU CLAVE \033[0;33m "
 echo -ne "\033[0;32m"
 read -t 20 -p " Responde [ s | n ] : " -e -i "n" x
-[[ $x = @(s|S|y|Y) ]] && source <(curl -sSL  https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Complementos/root-pass.sh) || echo -e "\033[1;32mAplica FIX en ( * \033[1;33m Menu 7\033[1;32m *\033[1;33m opcion 9 \033[1;32m*\033[1;32m)"
+[[ $x = @(s|S|y|Y) ]] && source <(curl -sSL  https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Complementos/root-pass.sh) || echo -e "\033[1;32mAplica FIX en ( * \033[1;33m Menu 7\033[1;32m *\033[1;33m opcion 9 \033[1;32m*\033[1;32m)"
 [[ -e /root/name ]] && figlet "$(less /root/name)" | lolcat || tittle
 return
 }
@@ -398,7 +398,7 @@ service ssh restart >/dev/null 2>&1
 #[[ -e ${SCPdir}/cabecalho ]] && bash ${SCPdir}/cabecalho --instalar
 install_ini
 cor[2]="\033[1;37m"
-wget -q -O /var/www/html/index.html https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/html/index.html
+wget -q -O /var/www/html/index.html https://raw.githubusercontent.com/kelokepe/scriptcgh/main/html/index.html
 install_fim
 #[[ -e ${SCPdir}/cabecalho ]] && bash ${SCPdir}/cabecalho --instalar
 return
