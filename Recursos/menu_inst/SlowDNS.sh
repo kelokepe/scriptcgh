@@ -6,7 +6,7 @@ clear
 [[ ! -d /etc/adm-lite/slow/ ]] && mkdir /etc/adm-lite/slow
 ADM_slow="/etc/adm-lite/slow/dnsi" && [[ ! -d ${ADM_slow} ]] && mkdir ${ADM_slow}
 Key="$(cat /etc/cghkey)" && _Key='/etc/cghkey'
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg) > /dev/null 
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg) > /dev/null 
 #${mbar2} ## #${mbar2} ## #${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ## #${mbar2} ## #${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ## #${mbar2} ## #${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ##
 #${mbar2} ## #${mbar2} ## #${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ## #${mbar2} ## #${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ## #${mbar2} ## #${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ###${mbar2} ##
 
@@ -25,7 +25,7 @@ function chekKEY {
 Key="$(cat /etc/cghkey)"
 IiP="$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
 [[ -e /file ]] && _double=$(cat < /file) ||  {
-wget -q -O /file https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt
+wget -q -O /file https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt
 _double=$(cat < /file)
 }
 _check2="$(echo -e "$_double" | grep ${IiP})"
@@ -185,7 +185,7 @@ info(){
   if [[ ! -e ${ADM_inst}/dns-server ]]; then    
   msg -ama " Descargando binario...." 
   [[ $(uname -m 2> /dev/null) != x86_64 ]] && {
-  if wget -O ${ADM_inst}/dns-server https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/SlowDNS/autoStart-ARM &>/dev/null ; then
+  if wget -O ${ADM_inst}/dns-server https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/SlowDNS/autoStart-ARM &>/dev/null ; then
   chmod +x ${ADM_inst}/dns-server    
   msg -verd "[OK]"    
   else    
@@ -197,7 +197,7 @@ info(){
   exit 0    
   fi
   } || {   
-  if wget -O ${ADM_inst}/dns-server https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/SlowDNS/autoStart-x86-64 &>/dev/null ; then
+  if wget -O ${ADM_inst}/dns-server https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/SlowDNS/autoStart-x86-64 &>/dev/null ; then
   chmod +x ${ADM_inst}/dns-server    
   msg -verd "[OK]"    
   else    

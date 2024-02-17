@@ -4,7 +4,7 @@
 function chekKEY {
 [[ -z ${IP} ]] && IP=$(cat < /bin/ejecutar/IPcgh)
 Key="$(cat /etc/cghkey)"
-_double=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt")
+_double=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt")
 IiP="$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
 _check2="$(echo -e "$_double" | grep ${IiP})"
 [[ -z ${_check2} ]] && {
@@ -33,7 +33,7 @@ mv etc/adm-lite/* /bin/ejecutar/Ubam
 }
 
 
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/module)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/module)
 [[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg
 msg -bar
 ADM_inst="/etc/adm-lite" && [[ ! -d ${ADM_inst} ]] && exit
@@ -211,7 +211,7 @@ inst_py () {
 sed -i '/PDirect80.py/d' /bin/autoboot
 #msg -bar
 	#msg -nama '        Descargando binario Compilado !! '
-wget -O $HOME/PDirect80.py 'https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/autoconfig-sh/PDirect.py'
+wget -O $HOME/PDirect80.py 'https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/autoconfig-sh/PDirect.py'
 screen -dmS "ws80" python $HOME/PDirect80.py & > /root/proxy.log 
 }
 
@@ -291,7 +291,7 @@ sleep 1
 			break
 			;;
 			2)
-			source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/autoconfig-sh/Proxy.sh)
+			source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/autoconfig-sh/Proxy.sh)
 			;;			
 			3)
 			kill  $(ps x | grep -w "PDirect80" | grep -v grep | cut -d ' ' -f1) &>/dev/null

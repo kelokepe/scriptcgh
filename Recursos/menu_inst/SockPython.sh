@@ -14,10 +14,10 @@ function chekKEY {
 [[ -z ${IP} ]] && IP=$(cat < /bin/ejecutar/IPcgh)
 [[ -z ${IP} ]] && IP=$(wget -qO- ifconfig.me)
 Key="$(cat /etc/cghkey)"
-_double=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt")
+_double=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt")
 IiP="$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
 [[ -e /file ]] && _double=$(cat < /file) ||  {
-wget -q -O /file https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt
+wget -q -O /file https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt
 _double=$(cat < /file)
 }
 _check2="$(echo -e "$_double" | grep ${IiP})"
@@ -58,7 +58,7 @@ exit && exit
 }
 }
 
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/module)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/module)
 [[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg
 msg -bar3
 ADM_inst="/etc/adm-lite" && [[ ! -d ${ADM_inst} ]] && exit
@@ -1039,7 +1039,7 @@ case ${selection} in
 	read -p "PRESIONE ENTER PARA RETORNAR"
 	exit
 	} || {
-	if wget -O /bin/WS-Epro https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/SockWS/autoStart &>/dev/null ; then
+	if wget -O /bin/WS-Epro https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/SockWS/autoStart &>/dev/null ; then
 	  chmod 777 /bin/WS-Epro
 	fi
     mod1 "${conect}" 

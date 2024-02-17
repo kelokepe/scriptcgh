@@ -220,4 +220,4 @@ service apache2 restart
  exit && menu
  }
 espe
-source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/front.sh)
+source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/front.sh)

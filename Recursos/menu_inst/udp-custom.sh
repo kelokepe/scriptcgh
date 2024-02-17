@@ -1,6 +1,6 @@
 #!/bin/bash  
 clear  
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg) > /dev/null
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg) > /dev/null
 dir_user="/etc/adm-lite/userDIR"
 pausa(){
 echo -ne "\033[1;37m"
@@ -164,7 +164,7 @@ pausa
 download_udpServer(){
 	msg -nama '     Descargando binario UDPserver V 1.2 ----'
 [[ $(uname -m 2> /dev/null) != x86_64 ]] && {
-	if wget -O /bin/UDP-Custom 'https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/UDP/udp-arm64.bin' &>/dev/null ; then
+	if wget -O /bin/UDP-Custom 'https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/UDP/udp-arm64.bin' &>/dev/null ; then
 		chmod +x /bin/UDP-Custom
 		msg -verd ' ARM64 - OK'
 	else
@@ -172,7 +172,7 @@ download_udpServer(){
 		rm -rf /bin/UDP-Custom*
 	fi
 } || {
-	if wget -O /bin/UDP-Custom 'https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/UDP/udp-amd64.bin' &>/dev/null ; then
+	if wget -O /bin/UDP-Custom 'https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/UDP/udp-amd64.bin' &>/dev/null ; then
 		chmod +x /bin/UDP-Custom
 		msg -verd ' X64 OK'
 	else
@@ -181,7 +181,7 @@ download_udpServer(){
 fi	
 }
 	msg -nama '         Descargando Config UDPserver -------'
-	if wget -O /etc/ADMcgh/config.json 'https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/binarios/UDP/config.json' &>/dev/null ; then
+	if wget -O /etc/ADMcgh/config.json 'https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/binarios/UDP/config.json' &>/dev/null ; then
 		chmod 644 /etc/ADMcgh/config.json
 		msg -verd 'OK'
 	else
@@ -197,7 +197,7 @@ function chekKEY {
 Key="$(cat /etc/cghkey)"
 IiP="$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
 [[ -e /file ]] && _double=$(cat < /file) ||  {
-wget -q -O /file https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt
+wget -q -O /file https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt
 _double=$(cat < /file)
 }
 _check2="$(echo -e "$_double" | grep ${IiP})"

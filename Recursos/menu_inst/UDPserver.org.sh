@@ -1,6 +1,6 @@
 #!/bin/bash  
 clear  
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg) > /dev/null
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg > /dev/null || source <(curl -sSL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg) > /dev/null
 
 selection_fun () {
 local selection="null"
@@ -41,8 +41,8 @@ function chekKEY {
 Key="$(cat /etc/cghkey)"
 _Key='/etc/cghkey'
 [[ -e /file ]] && _double=$(cat < /file) ||  {
-wget -q -O /file https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt
-_double=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/Control-Bot.txt")
+wget -q -O /file https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt
+_double=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/Control-Bot.txt")
 }
 IiP="$(ofus "$Key" | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}')"
 _check2="$(echo -e "$_double" | grep ${IiP} | awk '{print $1}')"
@@ -60,7 +60,7 @@ cheklist="$(cat /etc/folteto)"
 chekKEY="$(echo -e "$cheklist" | grep ${Key} | awk '{print $5}')"
 chekIP="$(echo -e "$cheklist" | grep ${IP} | awk '{print $3}')"
 [[ -z ${chekKEY} || -z ${chekIP} ]] && {
-xyz=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/token.sh")
+xyz=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/token.sh")
 [[ $(cat -n /etc/adm-lite/menu_credito | wc -l) -ge 2 ]] && ID="$(cat /etc/adm-lite/menu_credito |tail -1)" || ID="$(echo $xyz| awk '{print $2}')"
 TOKEN="$(echo $xyz| awk '{print $1}')"
 urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"
@@ -95,7 +95,7 @@ exit && exit
 }
 
 _mssBOT () {
-xyz=$(curl -sSL "https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Control/token.sh")
+xyz=$(curl -sSL "https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Control/token.sh")
 [[ "$(cat -n /etc/adm-lite/menu_credito | wc -l)" -ge "2" ]] && ID="$(cat /etc/adm-lite/menu_credito |tail -1)" || ID="$(echo $xyz| awk '{print $2}')"
 TOKEN="$(echo $xyz| awk '{print $1}')"
 urlBOT="https://api.telegram.org/bot$TOKEN/sendMessage"

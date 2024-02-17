@@ -85,14 +85,14 @@ function socks5alter(){
 echo -e "Instalando Sockd espere..."
 cd /etc/adm-lite/ 1> /dev/null 2> /dev/null
 rm /etc/adm-lite/dante-1.4.1.tar.gz 1> /dev/null 2> /dev/null
-wget --no-check-certificate https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/socks5-sh/dante-1.4.1.tar.gz 1> /dev/null 2> /dev/null
+wget --no-check-certificate https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/socks5-sh/dante-1.4.1.tar.gz 1> /dev/null 2> /dev/null
 tar -zxvf dante-1.4.1.tar.gz 1> /dev/null 2> /dev/null
 cd /etc/adm-lite/dante-1.4.1/ 1> /dev/null 2> /dev/null
 mkdir /home/dante 1> /dev/null 2> /dev/null
 ./configure --prefix=/home/dante 1> /dev/null 2> /dev/null
 make 1> /dev/null 2> /dev/null
 make install 1> /dev/null 2> /dev/null
-wget -O /home/dante/danted.conf https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/socks5-sh/danted.conf 1> /dev/null 2> /dev/null
+wget -O /home/dante/danted.conf https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/socks5-sh/danted.conf 1> /dev/null 2> /dev/null
 echo -e "Escribe un puerto para Sockd"
 read -p ": " sockcincox
 if lsof -Pi :$sockcincox -sTCP:LISTEN -t >/dev/null ; then

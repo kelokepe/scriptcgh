@@ -1,5 +1,5 @@
 #!/bin/bash
-source <(curl -sL https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/msg-bar/msg)
+source <(curl -sL https://raw.githubusercontent.com/kelokepe/scriptcgh/main/msg-bar/msg)
 barra="\033[0;31m=====================================================\033[0m"
 
 install_ini () {
@@ -291,7 +291,7 @@ echo -e "Creando Directorios" | pv -qL 30
 [[ -d /bin/ejecutar ]] && rm -f /bin/ejecutar/proxy3.js || mkdir /bin/ejecutar
 cd /bin/ejecutar
 echo -e "Descargando Ficheros JS" | pv -qL 30
-wget -q https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/ws-java-sh/proxy3.js
+wget -q https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/ws-java-sh/proxy3.js
 echo -e "\033[1;32mHabilitando NODE WS" | pv -qL 30
 #
 echo -e "Iniciando NODE WS" | pv -qL 30
@@ -353,7 +353,7 @@ echo -e "Creando Directorios" | pv -qL 15
 [[ -d /bin/ejecutar ]] && echo "Fichero Existente" || mkdir /bin/ejecutar
 cd /bin/ejecutar
 echo -e "Descargando Ficheros JS" | pv -qL 15
-wget -O httpsProxy.js -q https://raw.githubusercontent.com/emirjorge/Script-Z/master/CHUMO/Recursos/menu_inst/ws-java-sh/proxy3.js
+wget -O httpsProxy.js -q https://raw.githubusercontent.com/kelokepe/scriptcgh/main/Recursos/menu_inst/ws-java-sh/proxy3.js
 echo -e "\033[1;32mHabilitando NODE WS" | pv -qL 15
 #
 echo -e "Iniciando NODE WS" | pv -qL 15
