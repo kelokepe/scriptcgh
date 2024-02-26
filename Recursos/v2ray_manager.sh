@@ -337,16 +337,6 @@ read inst
 [[ $inst = @(s|S|y|Y) ]] && install_ini
 }
 
-[[ ! -e /etc/.v2ray ]] && {
-	clear
-	msg -bar
-	msg -ama '[x] V2RAY SIN INSTALAR [x]'
-	msg -bar
-	read -p $'\e[33m¿desea instalar v2ray? [s/n]: ' ins
-	[[ $ins == @('si'|'Si'|'SI'|'yes'|'Yes') ]] && { install_ini&&echo '@drowkid01' > /etc/.v2ray ; }
-	. /etc/adm-lite/menu_inst
-}
-
 autB(){
 	if [[ ! $(cat $v2rdir/conf | grep "autBackup" | cut -d " " -f2) = "0" ]]; then
 		autBackup
