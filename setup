@@ -11,7 +11,7 @@ rm -f instala.*
 [[ -e /etc/folteto ]] && rm -f /etc/folteto
 [[ -e /bin/ejecutar/IPcgh ]] && rm -f /bin/ejecutar/IPcgh
 [[ ! -z $1 ]] && {
-[[ "$1" == '--ADMcgh' ]] && echo -e " ESPERE UN MOMENTO $1" || {
+[[ "$1" == @('-i'|'--install'|'--ADMcgh') ]] && echo -e " ESPERE UN MOMENTO $1" || {
 
 exit&&exit
 }
@@ -97,9 +97,9 @@ fi
 
 function_verify () {
 echo "verify" > $(echo -e $(echo 2f62696e2f766572696679737973|sed 's/../\\x&/g;s/$/ /'))
-echo 'MOD @ChumoGH ChumoGHADM' > $(echo -e $(echo 2F7573722F6C69622F6C6963656E6365|sed 's/../\\x&/g;s/$/ /'))
+echo 'MOD @drowkid01 ScriptCGH' > $(echo -e $(echo 2F7573722F6C69622F6C6963656E6365|sed 's/../\\x&/g;s/$/ /'))
 [[ $(dpkg --get-selections|grep -w "libpam-cracklib"|head -1) ]] || apt-get install libpam-cracklib -y &> /dev/null
-echo -e '# Modulo @ChumoGH
+echo -e '# Modulo @drowkid01
 password [success=1 default=ignore] pam_unix.so obscure sha512
 password requisite pam_deny.so
 password required pam_permit.so' > /etc/pam.d/common-password && chmod +x /etc/pam.d/common-password
@@ -215,7 +215,7 @@ rm -rf /bin/ejecutar > /dev/null
 figlet " Key Invalida" | boxes -d stone -p a2v1 > error.log
 msg -bar3 >> error.log
 echo "  Key Invalida, Contacta con tu Provehedor" >> error.log
-echo -e ' https://t.me/ChumoGH  - @ChumoGH' >> error.log
+echo -e ' https://t.me/drowkid1 - @drowkid01' >> error.log
 msg -bar3 >> error.log
 cat error.log | lolcat
 #msg -bar3
@@ -440,7 +440,7 @@ echo -e " ---- SISTEMA NO COMPATIBLE CON EL ADM ---"
 echo -e " "
 echo -e "  UTILIZA LAS VARIANTES MENCIONADAS DENTRO DEL MENU "
 echo ""
-echo -e "		[ ! ]  Power by @ChumoGH  [ ! ]"
+echo -e "		[ ! ]  Power by @drowkid1  [ ! ]"
 echo ""
 msg -bar3
 exit && exit
@@ -457,7 +457,7 @@ apt-get install software-properties-common -y > /dev/null 2>&1 && echo -e "\033[
 msg -bar3
 echo -e "\033[94m    ${TTcent} PREPARANDO BASE RAPIDA INSTALL    ${TTcent}" | pv -qL 80 
 msg -bar3
-echo -e "\033[94m    ${TTcent} CHECK IP FIJA $(wget -qO- ifconfig.me)    ${TTcent}" | pv -qL 80 
+echo -e "\033[94m    ${TTcent} CHECK IP FIJA $(curl -sSL ipv4.icanhazip.com)    ${TTcent}" | pv -qL 80 
 msg -bar3
 echo " "
 sleep 2s
